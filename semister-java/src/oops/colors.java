@@ -1,7 +1,7 @@
 package oops;
 import java.util.*;
 public class colors {
-	public static int mix_color(int color1,int color2,int color3) {
+	public int mix_color(int color1,int color2,int color3) {
 		int color1A = (color1 >> 24 & 0xff);
 	    int color1R = ((color1 & 0xff0000) >> 16);
 	    int color1G = ((color1 & 0xff00) >> 8);
@@ -21,22 +21,15 @@ public class colors {
 	    int mixB=(int)((color1B+color2B+color3B)/3);
 	    return mixA << 24 | mixR << 16 | mixG << 8 | mixB;
 	}
-
-	public static void main(String[] args)
-	{
-		Scanner sc=new Scanner(System.in);
-		System.out.print("Enter color1 in Hexadecimal:-");
-		int color1=Integer.decode(sc.next());
-		System.out.print("Enter color2 in Hexadecimal:-");
-		int color2=Integer.decode(sc.next());
-		System.out.print("Enter color3 in Hexadecimal:-");
-		int color3=Integer.decode(sc.next());
-		System.out.println("Combination of 0x"+Integer.toHexString(color1)+" 0x"+Integer.toHexString(color2)+" 0x"+Integer.toHexString(color3)+" is 0x"+Integer.toHexString(mix_color(color1, color2, color3)));
-		sc.close();
-		
-	}
-
-	
-
-	
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter inputs for three colors");
+//		System.out.print("Enter color1 in Hexadecimal:-");
+//		int color1=Integer.decode(sc.next());
+//		System.out.print("Enter color2 in Hexadecimal:-");
+//		int color2=Integer.decode(sc.next());
+//		System.out.print("Enter color3 in Hexadecimal:-");
+//		int color3=Integer.decode(sc.next());
+//		String ans = Integer.toHexString(mix_color(color1, color2, color3));
+//	}
 }
